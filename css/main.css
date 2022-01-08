@@ -44,8 +44,7 @@ button {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -136,7 +135,7 @@ a:hover, a:focus {
 .open-menu-btn {
   position: absolute;
   top: 10px;
-  left: 75%;
+  right: 15px;
 }
 
 .header__container {
@@ -199,7 +198,7 @@ a:hover, a:focus {
   margin-bottom: 32px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 400px) {
   .contact-mob__tel {
     font-size: 34px;
   }
@@ -219,8 +218,25 @@ a:hover, a:focus {
   flex-wrap: wrap;
 }
 
+.mob-social__item {
+  display: flex;
+}
+
+.mob-social__item:not(:last-child)::after {
+  content: '';
+}
+
+@media screen and (min-width: 320px) {
+  .mob-social__item:not(:last-child)::after {
+    width: 1px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+    margin-left: 10px;
+  }
+}
+
 .mob-social__item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .mob-social__link {
@@ -345,6 +361,88 @@ a:hover, a:focus {
   height: 16px;
 }
 
+.hero {
+  padding: 200px 0px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/imeges/hero-mobile.jpg);
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/imeges/hero-mobile@2x.jpg);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/imeges/hero-tablet.jpg);
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/imeges/hero-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/imeges/hero-desktop.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/imeges/hero-desktop@2x.jpg);
+  }
+}
+
+.hero__title {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 696px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  align-items: center;
+  display: block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+  background-color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: transparent;
+}
+
+.btn:focus, .btn:hover {
+  color: var(--main-title-color);
+  background-color: var(--accent-color);
+}
+
 .work {
   padding-top: 0;
   background-color: var(--background-origin);
@@ -363,6 +461,7 @@ a:hover, a:focus {
   position: fixed;
   top: 0;
   transition: opacity 750ms, visibility 750ms;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden .modal {
@@ -380,18 +479,20 @@ a:hover, a:focus {
   transform: scale(-1) translateY(0);
   transition: transform 750ms;
   position: absolute;
-  top: 50%;
+  top: 2%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
 }
 
-@media screen and (min-width: 480) {
+@media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1200px) {
   .modal {
     width: 520px;
   }
@@ -533,7 +634,7 @@ a:hover, a:focus {
   border: none;
 }
 
-.contract {
+.check-text__link {
   margin-left: 2px;
   text-decoration-line: underline;
   color: var(--accent-color);

@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   transition: opacity 750ms, visibility 750ms;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden .modal {
@@ -26,15 +27,17 @@
   transition: transform 750ms;
 
   position: absolute;
-  top: 50%;
+  top: 2%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
 
-  @media screen and(min-width:480) {
+  @media screen and(min-width:480px) {
     width: 450px;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  @media screen and(min-width:1200) {
+  @media screen and(min-width:1200px) {
     width: 520px;
   }
 }
@@ -185,7 +188,7 @@
   border: none;
 }
 
-.contract {
+.check-text__link {
   margin-left: 2px;
   text-decoration-line: underline;
   color: var(--accent-color);
