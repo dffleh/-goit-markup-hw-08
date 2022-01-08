@@ -1,3 +1,117 @@
+.mobile-menu {
+  display: block;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+
+.open-menu-btn,
+.close-menu-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.close-menu-btn,
+.open-menu-btn {
+  position: absolute;
+  top: 10px;
+  left: 75%;
+}
+
+.header__container {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.mob-menu {
+  display: block;
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+
+  @media screen and (min-width: 480px) {
+  }
+}
+
+.mob-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: #212121;
+}
+.mob-menu__link--current {
+  color: var(--accent-color);
+}
+
+.contact-mob {
+  display: block;
+  margin-top: 302px;
+}
+
+.contact-mob__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+
+  display: block;
+  margin-bottom: 32px;
+}
+
+.contact-mob__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.mob-social {
+  display: flex;
+  margin-top: 64px;
+  flex-wrap: wrap;
+}
+
+.mob-social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mob-social__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
 .header {
   border-bottom: 1px solid #eeeeee;
   background-color: var(--background-origin);
@@ -42,10 +156,6 @@
   }
 }
 
-.header__container {
-  display: flex;
-}
-
 .site-nav__link {
   position: relative;
   display: block;
@@ -64,6 +174,13 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+
+.logo__mobile-menu {
+  display: block;
+  font-size: 24px;
+  line-height: 1.16;
+  padding: 16px 0 16px 15px;
 }
 
 .logo__header {
