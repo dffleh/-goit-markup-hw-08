@@ -150,7 +150,8 @@ a:hover, a:focus {
 }
 
 .mob-menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   background-color: #ffffff;
   top: 0;
@@ -185,17 +186,23 @@ a:hover, a:focus {
 
 .contact-mob {
   display: block;
-  margin-top: 302px;
+  margin-top: auto;
 }
 
 .contact-mob__tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1.08;
   letter-spacing: 0.02em;
   color: var(--accent-color);
   display: block;
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 480px) {
+  .contact-mob__tel {
+    font-size: 34px;
+  }
 }
 
 .contact-mob__mail {
@@ -396,7 +403,7 @@ a:hover, a:focus {
 .is-hidden {
   visibility: hidden;
   opacity: 0;
-  pointer-events: 0;
+  pointer-events: none;
 }
 
 .modal__title {
