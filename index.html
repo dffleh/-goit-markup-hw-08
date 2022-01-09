@@ -186,12 +186,23 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img 
-                            src="./imeges/studio/img-sec3-1.jpg" 
-                            alt="Игорь Демьяненко"
-                            width="270"
-                            height="260"
+                        <picture>
+                            <source srcset="./imeges/team/imgteam_desk1_1x.jpg x1,
+                                            ./imeges/team/imgteam_desk1_2x.jpg x2"
+                                    media="(min-width: 1200px)"
                             />
+                            <source srcset="./imeges/team/imgteam1tab_1x.jpg x1,
+                                            ./imeges/team/imgteam1tab_2x.jpg x2" 
+                                    media="(min-width: 768px)" 
+                                />
+                            <source srcset="./imeges/team/imgteam1x.jpg x1,
+                                            ./imeges/team/imgteam2x.jpg x2"
+                                    media="(min-width: 320px)" 
+                                />
+                            <img src="./imeges/team/imgteam1x.jpg" alt="Игорь Демьяненко"
+                            />
+                        </picture>
+                        
                         <div class="team-card">
                             <h3 class="team-card__title">Игорь Демьяненко</h3>
                             <p class="team-card__text" lang="en">Product Designer</p>
@@ -538,7 +549,8 @@
                                 <use href="./imeges/icons.svg#icon-check"></use>
                             </svg>
                         </span>
-                         <span class="check-text__item">Соглашаюсь с рассылкой и принимаю <a class="check-text__link" href="#0">Условия
+                        <!-- Соглашаюсь с рассылкой и принимаю<a class="contract" href=""> Условия договора</a> -->
+                        <span class="check-text__item">Соглашаюсь с рассылкой и принимаю <a class="check-text__link" href="#0">Условия
                                 договора</a></span>
                     </label>
                     <button 
