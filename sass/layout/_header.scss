@@ -1,8 +1,18 @@
 .mobile-menu {
+  position: relative;
   display: block;
   height: 60px;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media screen and(min-width:480px) {
+    width: 480px;
+  }
 
   @media screen and(min-width:768px) {
     display: none;
